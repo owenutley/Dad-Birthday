@@ -1,0 +1,119 @@
+/* Basic page setup */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #200130; /* A warm, gentle background color */
+    color: #ece4de;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container to keep everything centered and readable */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Make the title stand out */
+header h1 {
+    color: #e4adbf; /* A nice celebratory pink/red */
+}
+
+/* Image styling to make it look framed */
+.photo-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Style the surprise button */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #d23669;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Add a slight hover effect to the button */
+button:hover {
+    background-color: #a1284f;
+}
+
+/* --- Slideshow Styles --- */
+
+/* --- Updated Slideshow Styles --- */
+
+.slideshow-container {
+    position: relative; 
+    width: 100%;
+    max-width: 600px; /* Limits how wide the slideshow can get */
+    height: 400px; /* Sets a fixed height so the page doesn't jump around */
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #222; /* A dark background frames the photos nicely */
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+}
+
+/* Only show the slide with the 'active' class */
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%; 
+    height: 400px; /* Must match the container height */
+    
+    /* 
+       'contain' ensures the whole photo is visible without cropping. 
+       If you prefer the photos to fill the entire box edge-to-edge 
+       (even if it means cropping the edges slightly), change this to 'cover'. 
+    */
+    object-fit: contain; 
+    display: block; 
+}
+
+/* Style the previous and next buttons */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Perfectly centers them vertically */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 0; /* Overrides the margin from the main button style */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.slide-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.message-board {
+    padding: 5px 95px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
